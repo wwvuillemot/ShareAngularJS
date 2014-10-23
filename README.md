@@ -23,8 +23,8 @@ include `grunt`, `grunt-contrib-less`, and `grunt-contrib-watch`.
 
 Depending on how you keep your `less` files, you will want to `@import` the CLAF `less` file.
 
-   /* app claf stylesheet */
-   @import './bower_components/claf/stylesheets/claf.less';
+     /* app claf stylesheet */
+     @import './bower_components/claf/stylesheets/claf.less';
 
 `/Gruntfile.js`
 -------
@@ -33,11 +33,11 @@ Include at the root of the project a [`Gruntfile.js`](Gruntfile.js).
 
 From the command-line you can run `less` to do a one-time compile to `css`:
 
-   grunt less
+     grunt less
 
 Alternatively, if you are in development mode then you can run
 
-   grunt watch
+     grunt watch
 
 
 `/bower.json`
