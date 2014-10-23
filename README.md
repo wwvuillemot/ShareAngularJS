@@ -12,24 +12,36 @@ templates between different app frameworks using [Bower](http://bower.io).
 Configuration
 =======
 
+`/package.json`
+-------
+
+Update [`package.json`](package.json), found in the root of the project, to
+include `grunt`, `grunt-contrib-less`, and `grunt-contrib-watch`.
+
+`/app/app.less`
+-------
+
+Depending on how you keep your `less` files, you will want to `@import` the CLAF `less` file.
+
+   /* app claf stylesheet */
+   @import './bower_components/claf/stylesheets/claf.less';
+
+`/Gruntfile.js`
+-------
+
+Include at the root of the project a [`Gruntfile.js`](Gruntfile.js).  
+
+From the command-line you can run `less` to do a one-time compile to `css`:
+
+   grunt less
+
+Alternatively, if you are in development mode then you can run
+
+   grunt watch
+
+
 `/bower.json`
 -------
 
-Update `bower.json` found in the root of the project to include our CLAF dependency.
-
-     {
-       "name": "share-angular",
-       "description": "Demonstration of sharing CLAF between frameworks",
-       "version": "0.0.1",
-       "homepage": "https://github.com/wwvuillemot/ShareAngularJS",
-       "license": "MIT",
-       "private": true,
-       "dependencies": {
-         "angular": "1.2.x",
-         "angular-route": "1.2.x",
-         "angular-loader": "1.2.x",
-         "angular-mocks": "~1.2.x",
-         "html5-boilerplate": "~4.3.0",
-         "claf": "https://github.com/wwvuillemot/ShareCLAF.git"
-       }
-     }
+Update [`bower.json`](bower.json), found in the root of the project, to include
+our CLAF dependency.
