@@ -25,6 +25,8 @@ Depending on how you keep your `less` files, you will want to `@import` the CLAF
 
      /* app claf stylesheet */
      @import './bower_components/claf/stylesheets/claf.less';
+     @import './bower_components/bootstrap/less/bootstrap.less';
+
 
 `/Gruntfile.js`
 -------
